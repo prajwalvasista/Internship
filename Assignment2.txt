@@ -1,0 +1,31 @@
+
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace Prajwal_Assignment
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string inputText = "Hdjsh asd2324234jghjsd hjsdg sdhk 12212021 idf32432 32423 d34234jh dfh";
+            var regex = new Regex(@"\d{2}\d{2}\d{4}");
+            foreach (Match m in regex.Matches(inputText))
+            {
+                DateTime dt;
+                string date = m.Value;
+                    Console.WriteLine(date.ToString());
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
